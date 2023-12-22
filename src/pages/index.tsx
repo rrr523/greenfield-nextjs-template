@@ -23,7 +23,9 @@ export default function Home() {
       </Head>
       <main className={`${styles.main} ${inter.className}`}>
         <Wallet />
-        {isConnected && <Demo /> }
+        {isConnected && <>
+          <Demo />
+        </> }
       </main>
     </>
   )
