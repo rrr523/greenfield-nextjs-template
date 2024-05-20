@@ -1,5 +1,6 @@
 import { client, selectSp } from '@/client';
 import { getOffchainAuthKeys } from '@/utils/offchainAuth';
+import { VisibilityType, Long } from '@bnb-chain/greenfield-js-sdk';
 import { ChangeEvent, useState } from 'react';
 import { useAccount } from 'wagmi';
 
@@ -67,18 +68,10 @@ export const Demo = () => {
                 {
                   bucketName: createBucketInfo.bucketName,
                   creator: address,
-                  visibility: 'VISIBILITY_TYPE_PUBLIC_READ',
-                  chargedReadQuota: '0',
-                  spInfo: {
-                    primarySpAddress: spInfo.primarySpAddress,
-                  },
+                  primarySpAddress: spInfo.primarySpAddress,
+                  visibility: VisibilityType.VISIBILITY_TYPE_PUBLIC_READ,
+                  chargedReadQuota: Long.fromString('0'),
                   paymentAddress: address,
-                },
-                {
-                  type: 'EDDSA',
-                  domain: window.location.origin,
-                  seed: offChainData.seedString,
-                  address,
                 },
               );
 
@@ -108,7 +101,7 @@ export const Demo = () => {
                 alert(JSON.stringify(err))
               }
             }
-            
+
           }}
           >
             broadcast with simulate
