@@ -1,6 +1,6 @@
 # Greenfield Nextjs Template
 
-[![Open in CodeSandbox](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://codesandbox.io/p/github/rrr523/greenfield-nextjs-template/main)
+[![Edit in CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/github/rrr523/greenfield-nextjs-template/main)
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and [`greenfield-js-sdk`](https://www.npmjs.com/package/@bnb-chain/greenfield-js-sdk).
 
